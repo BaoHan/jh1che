@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <title>江海易车网 | 管理后台</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/dataTables.bootstrap.js"></script>
+    <script src="js/custom-new.js"></script>
+  </head>
+  <body>
+    <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle Navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">江海易车网</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">车辆管理</a></li>
+            <li><a href="#">申请管理</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">用户名称</a>
+              <ul role="menu" class="dropdown-menu">
+                <li><a href="#">登出</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container main">
+      <div role="toolbar" class="btn-toolbar">
+        <ul role="tablist" class="options btn-group btn-group-justified">
+          <li href="#basic" role="tab" data-toggle="tab" class="btn-group active"><a class="btn btn-primary btn-lg">基本信息</a></li>
+          <li href="#verify" role="tab" data-toggle="tab" class="btn-group"><a class="btn btn-primary btn-lg">检测信息</a></li>
+          <li href="#carinfo" role="tab" data-toggle="tab" class="btn-group"><a class="btn btn-primary btn-lg">车辆信息</a></li>
+        </ul>
+      </div>
+      <div class="tab-content options-inner">
+        <div id="basic" role="tabpanel" class="tab-pane fade in active">
+          <div class="row">
+            <h3>汽车信息</h3>
+            <div class="col-md-3">
+              <select class="form-control">
+                <option>品牌</option>
+              </select>
+            </div>
+            <div class="col-xs-3">
+              <select class="form-control">
+                <option>型号</option>
+              </select>
+            </div>
+            <div class="col-xs-3">
+              <div class="input-group">
+                <input type="text" placeholder="款型" class="form-control"><span class="input-group-addon">款</span>
+              </div>
+            </div>
+            <div class="col-xs-3">
+              <div class="input-group">
+                <input type="text" placeholder="排量" class="form-control"><span class="input-group-addon">L </span>
+              </div>
+            </div>
+            <div class="col-xs-3">
+              <div class="input-group">
+                <input type="text" placeholder="里程数" class="form-control"><span class="input-group-addon">万公里</span>
+              </div>
+            </div>
+            <div class="col-xs-3">
+              <select class="form-control">
+                <option>变速箱</option>
+                <option>自动</option>
+                <option>手动</option>
+                <option>手自一体</option>
+              </select>
+            </div>
+            <div class="col-xs-3">
+              <select class="form-control">
+                <option>排放标准</option>
+                <option>国5</option>
+                <option>国4</option>
+              </select>
+            </div>
+            <div class="col-xs-3">
+              <select class="form-control">
+                <option>车型</option>
+                <option>轿车</option>
+                <option>SUV</option>
+              </select>
+            </div>
+            <div class="col-xs-3">
+              <select class="form-control">
+                <option>车厢颜色</option>
+                <option>黑色</option>
+                <option>白色</option>
+                <option>银色</option>
+                <option>棕色</option>
+                <option>黄色</option>
+                <option>红色</option>
+                <option>蓝色</option>
+                <option>银色</option>
+                <option>其他</option>
+              </select>
+            </div>
+            <div class="col-xs-3">
+              <input type="text" placeholder="年检到期时间" class="form-control">
+            </div>
+            <div class="col-xs-3">
+              <input type="text" placeholder="交强险到期时间" class="form-control">
+            </div>
+            <div class="col-xs-3">
+              <input type="text" placeholder="商业险到期时间" class="form-control">
+            </div>
+            <div class="col-xs-3">
+              <select class="form-control">
+                <option>归属地</option>
+                <option>无锡</option>
+                <option>江阴</option>
+                <option>宜兴</option>
+                <option>其他</option>
+              </select>
+            </div>
+            <div class="col-xs-3">
+              <div class="input-group">
+                <input type="text" placeholder="过户次数" class="form-control"><span class="input-group-addon">次</span>
+              </div>
+            </div>
+            <div class="col-xs-3">
+              <div class="input-group">
+                <input type="text" placeholder="车龄" class="form-control"><span class="input-group-addon">年</span>
+              </div>
+            </div>
+            <div class="col-xs-3">
+              <select class="form-control">
+                <option>购车发票</option>
+                <option>有</option>
+                <option>无</option>
+              </select>
+            </div>
+            <div class="col-xs-3">
+              <select class="form-control">
+                <option>4S店保养</option>
+                <option>是</option>
+                <option>否</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <h3>车主信息</h3>
+            <div class="col-xs-3">
+              <input type="text" placeholder="车主姓名" class="form-control">
+            </div>
+            <div class="col-xs-3">
+              <div class="input-group">
+                <input type="text" placeholder="年龄" class="form-control"><span class="input-group-addon">岁</span>
+              </div>
+            </div>
+            <div class="col-xs-3">
+              <select class="form-control">
+                <option>性别</option>
+                <option>男</option>
+                <option>女</option>
+              </select>
+            </div>
+            <div class="col-xs-3">
+              <input type="text" placeholder="手机号" class="form-control">
+            </div>
+            <div class="col-xs-3">
+              <input type="text" placeholder="所在地" class="form-control">
+            </div>
+            <div class="col-xs-3">
+              <input type="text" placeholder="邮箱" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div id="verify" role="tabpanel" class="tab-pane fade">
+          <2222></2222>
+        </div>
+        <div id="carinfo" role="tabpanel" class="tab-pane fade">
+          <3333></3333>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

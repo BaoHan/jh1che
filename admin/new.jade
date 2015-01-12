@@ -1,0 +1,146 @@
+doctype html
+html(lang="zh")
+	head
+		title 江海易车网 | 管理后台
+		meta(charset="utf-8")
+		link(rel="stylesheet" href="css/bootstrap.min.css")
+		link(rel="stylesheet" href="css/style.css")
+		script(src="js/jquery-2.1.3.min.js")
+		script(src="js/bootstrap.min.js")
+		script(src="js/dataTables.bootstrap.js")
+		script(src="js/custom-new.js")
+	body
+		nav.navbar.navbar-inverse.navbar-fixed-top(role="navigation")
+			.container-fluid
+				.navbar-header
+					button.navbar-toggle.collapsed(type="button",data-toggle="collapse",data-target="#navbar",aria-controls="navbar")
+						span.sr-only Toggle Navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand(href="#") 江海易车网
+				#navbar.navbar-collapse.collapse
+					ul.nav.navbar-nav
+						li
+							a(href="#") 车辆管理
+						li
+							a(href="#") 申请管理
+					ul.nav.navbar-nav.navbar-right
+						li.dropdown
+							a.dropdown-toggle(href="#",data-toggle="dropdown") 用户名称
+							ul.dropdown-menu(role="menu")
+								li
+									a(href="#") 登出
+		.container.main
+			.btn-toolbar(role="toolbar")
+				ul.options.btn-group.btn-group-justified(role="tablist")
+					li.btn-group.active(href="#basic",role="tab",data-toggle="tab")
+						a.btn.btn-primary.btn-lg 基本信息
+					li.btn-group(href="#verify",role="tab",data-toggle="tab")
+						a.btn.btn-primary.btn-lg 检测信息
+					li.btn-group(href="#carinfo",role="tab",data-toggle="tab")
+						a.btn.btn-primary.btn-lg 车辆信息
+			.tab-content.options-inner
+				#basic.tab-pane.fade.in.active(role="tabpanel")
+					.row
+						h3 汽车信息
+						.col-md-3
+							select.form-control
+								option 品牌
+						.col-xs-3
+							select.form-control
+								option 型号
+						.col-xs-3
+							.input-group
+								input.form-control(type="text",placeholder="款型")
+								span.input-group-addon 款
+						.col-xs-3
+							.input-group
+								input.form-control(type="text",placeholder="排量")
+								span.input-group-addon L 
+						.col-xs-3
+							.input-group
+								input.form-control(type="text",placeholder="里程数")
+								span.input-group-addon 万公里
+						.col-xs-3
+							select.form-control
+								option 变速箱
+								option 自动
+								option 手动
+								option 手自一体
+						.col-xs-3
+							select.form-control
+								option 排放标准
+								option 国5
+								option 国4
+						.col-xs-3
+							select.form-control
+								option 车型
+								option 轿车
+								option SUV
+						.col-xs-3
+							select.form-control
+								option 车厢颜色
+								option 黑色
+								option 白色
+								option 银色
+								option 棕色
+								option 黄色
+								option 红色
+								option 蓝色
+								option 银色
+								option 其他
+						.col-xs-3
+							input.form-control(type="text",placeholder="年检到期时间")
+						.col-xs-3
+							input.form-control(type="text",placeholder="交强险到期时间")
+						.col-xs-3
+							input.form-control(type="text",placeholder="商业险到期时间")
+						.col-xs-3
+							select.form-control
+								option 归属地
+								option 无锡
+								option 江阴
+								option 宜兴
+								option 其他
+						.col-xs-3
+							.input-group
+								input.form-control(type="text",placeholder="过户次数")
+								span.input-group-addon 次
+						.col-xs-3
+							.input-group
+								input.form-control(type="text",placeholder="车龄")
+								span.input-group-addon 年
+						.col-xs-3
+							select.form-control
+								option 购车发票
+								option 有
+								option 无
+						.col-xs-3
+							select.form-control
+								option 4S店保养
+								option 是
+								option 否
+					.row
+						h3 车主信息
+						.col-xs-3
+							input.form-control(type="text",placeholder="车主姓名")
+						.col-xs-3
+							.input-group
+								input.form-control(type="text",placeholder="年龄")
+								span.input-group-addon 岁
+						.col-xs-3
+							select.form-control
+								option 性别
+								option 男
+								option 女
+						.col-xs-3
+							input.form-control(type="text",placeholder="手机号")
+						.col-xs-3
+							input.form-control(type="text",placeholder="所在地")
+						.col-xs-3
+							input.form-control(type="text",placeholder="邮箱")
+				#verify.tab-pane.fade(role="tabpanel")
+					2222
+				#carinfo.tab-pane.fade(role="tabpanel")
+					3333

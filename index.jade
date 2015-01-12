@@ -1,0 +1,278 @@
+doctype html
+html(lang="zh")
+	head
+		title 江海二手车网
+		meta(charset="utf-8")
+		link(rel="stylesheet" href="css/bootstrap.min.css")
+		link(rel="stylesheet" href="css/style.css")
+		script(src="js/jquery-2.1.3.min.js")
+		script(src="js/bootstrap.min.js")
+	body
+		.topbar
+			.pull-left 热线电话 400-800-8888
+			.pull-right
+				ul.nav.nav-pills
+					li
+						a(href="#") QQ交流群
+					li
+						a(href="#") 新浪微博
+					li
+						a(href="#") 官方微信
+					
+		.head
+			.container
+				.pull-left
+					a#logo(href="#")
+						img(src="img/logo.png")
+				.pull-right
+					ul.nav.nav-pills
+						li.active
+							a(href="#") 首 页
+						li
+							a(href="#") 我要买车
+						li
+							a(href="#") 我要卖车
+						li
+							a(href="#") 服务保障
+		.top.top-home(style="background-image:url('')")
+			h1 无锡最大的C2C二手车平台
+			p 当前已经收录2375辆二手车，已售出139辆
+		.fliter
+			.container
+				.col-xs-2
+					#brand.dropdown
+						button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							.pull-left 品 牌
+							.pull-right
+								span.caret
+						ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+							li
+								a(data-url="audi") A 奥迪
+							li
+								a(data-url="aston") A 阿斯顿 马丁
+							li
+								a(data-url="audiRS") A 奥迪RS
+							li
+								a(data-url="anke") A 安凯客车
+				.col-xs-2
+					#model.dropdown
+						button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							.pull-left 型 号
+							.pull-right
+								span.caret
+						ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+							li
+								a(data-url="audiA1") 奥迪A1
+				.col-xs-2
+					#price.dropdown
+						button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							.pull-left 价 格
+							.pull-right
+								span.caret
+						ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+							li
+								a(data-url="3w") 3万以下
+				.col-xs-2
+					#miles.dropdown
+						button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							.pull-left 公里数
+							.pull-right
+								span.caret
+						ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+							li
+								a(href="") 1万公里以下
+				.col-xs-2
+					#years.dropdown
+						button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							.pull-left 车 龄
+							.pull-right
+								span.caret
+						ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+							li
+								a(href="") 1年
+				.col-xs-2
+						a.btn.btn-success.btn-block#addition() 更多选项
+				#more-fliter.addition
+					.col-xs-2
+						#gearbox.dropdown
+							button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+								.pull-left 变速箱
+								.pull-right
+									span.caret
+							ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+								li
+									a(href="") 手动
+							
+					.col-xs-2
+						#type.dropdown
+							button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+								.pull-left 车 型
+								.pull-right
+									span.caret
+							ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+								li
+									a(href="") 轿 车
+					.col-xs-2
+						#pailiang.dropdown
+							button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+								.pull-left 排 量
+								.pull-right
+									span.caret
+							ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+								li
+									a(href="") 1L及以下
+					.col-xs-2
+						#guo.dropdown
+							button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+								.pull-left 排放标准
+								.pull-right
+									span.caret
+							ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+								li
+									a(href="") 国四
+					.col-xs-2
+						#color.dropdown
+							button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+								.pull-left 颜 色
+								.pull-right
+									span.caret
+							ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+								li
+									a(href="") 白色
+					.col-xs-2
+						#code.dropdown
+							.input-group
+								span.input-group-addon JH-
+								input.form-control(type="text",placeholder="车辆编码")
+		.content
+			.container
+				.cat-title.row
+					.pull-left
+						h3 新手代步
+						a(href="#") 更多>>
+					.pull-right
+						= '所有车均享受江海易车网保障服务:'
+				.row
+					- for(var x = 0; x < 8; x++)
+						.col-md-3.box
+							a
+								label 送2000油卡
+								.cover-img
+									img.img-responsive(src="img/placeholder.jpg")
+								p= '高尔夫-6 2012款 两箱 1.6L 自动顶配'
+								.price= '12.3'
+									span= '万'
+									span.basic 2010年01月
+										em.separator
+										= '6.70万公里'
+			.container
+				.cat-title.row
+					.pull-left
+						h3 新手代步
+						a(href="#") 更多>>
+					.pull-right
+						= '所有车均享受江海易车网保障服务:'
+				.row
+					- for(var x = 0; x < 8; x++)
+						.col-md-3.box
+							a
+								label 送2000油卡
+								.cover-img
+									img.img-responsive(src="img/placeholder.jpg")
+								p= '高尔夫-6 2012款 两箱 1.6L 自动顶配'
+								.price= '12.3'
+									span= '万'
+									span.basic 2010年01月
+										em.separator
+										= '6.70万公里'
+			.container
+				.cat-title.row
+					.pull-left
+						h3 经济好车
+						a(href="#") 更多>>
+					.pull-right
+						= '所有车均享受江海易车网保障服务:'
+				.row
+					- for(var x = 0; x < 8; x++)
+						.col-md-3.box
+							a
+								label 送2000油卡
+								.cover-img
+									img.img-responsive(src="img/placeholder.jpg")
+								p= '高尔夫-6 2012款 两箱 1.6L 自动顶配'
+								.price= '12.3'
+									span= '万'
+									span.basic 2010年01月
+										em.separator
+										= '6.70万公里'
+			.container
+				.cat-title.row
+					.pull-left
+						h3 精英之选
+						a(href="#") 更多>>
+					.pull-right
+						= '所有车均享受江海易车网保障服务:'
+				.row
+					- for(var x = 0; x < 8; x++)
+						.col-md-3.box
+							a
+								label 送2000油卡
+								.cover-img
+									img.img-responsive(src="img/placeholder.jpg")
+								p= '高尔夫-6 2012款 两箱 1.6L 自动顶配'
+								.price= '12.3'
+									span= '万'
+									span.basic 2010年01月
+										em.separator
+										= '6.70万公里'
+			.container
+				.cat-title.row
+					.pull-left
+						h3 高端大气
+						a(href="#") 更多>>
+					.pull-right
+						= '所有车均享受江海易车网保障服务:'
+				.row
+					- for(var x = 0; x < 8; x++)
+						.col-md-3.box
+							a
+								label 送2000油卡
+								.cover-img
+									img.img-responsive(src="img/placeholder.jpg")
+								p= '高尔夫-6 2012款 两箱 1.6L 自动顶配'
+								.price= '12.3'
+									span= '万'
+									span.basic 2010年01月
+										em.separator
+										= '6.70万公里'
+			.container
+				.cat-title.row
+					.pull-left
+						h3 豪华名品
+						a(href="#") 更多>>
+					.pull-right
+						= '所有车均享受江海易车网保障服务:'
+				.row
+					- for(var x = 0; x < 8; x++)
+						.col-md-3.box
+							a
+								label 送2000油卡
+								.cover-img
+									img.img-responsive(src="img/placeholder.jpg")
+								p= '高尔夫-6 2012款 两箱 1.6L 自动顶配'
+								.price= '12.3'
+									span= '万'
+									span.basic 2010年01月
+										em.separator
+										= '6.70万公里'
+		.footer
+			.container
+				p.pull-left copyright by 江苏太运集团
+				.pull-right
+					ul.nav.nav-pills
+						li
+							a(href="#") 关于我们
+						li
+							a(href="#") 联系我们
+						li
+							a(href="#") 加入我们

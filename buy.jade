@@ -1,0 +1,248 @@
+doctype html
+html(lang="zh")
+	head
+		title 江海二手车网 | 我要买车
+		meta(charset="utf-8")
+		link(rel="stylesheet" href="css/bootstrap.min.css")
+		link(rel="stylesheet" href="css/style.css")
+		script(src="js/jquery-2.1.3.min.js")
+		script(src="js/bootstrap.min.js")
+	body
+		.topbar
+			.pull-left 热线电话 400-800-8888
+			.pull-right
+				ul.nav.nav-pills
+					li
+						a(href="#") QQ交流群
+					li
+						a(href="#") 新浪微博
+					li
+						a(href="#") 官方微信
+					
+		.head
+			.container
+				.pull-left
+					a#logo(href="#")
+						img(src="img/logo.png")
+				.pull-right
+					ul.nav.nav-pills
+						li.active
+							a(href="#") 首 页
+						li
+							a(href="#") 我要买车
+						li
+							a(href="#") 我要卖车
+						li
+							a(href="#") 服务保障
+		.top(style="background-image:url('')")
+			.container
+				.pull-left
+					h1 我要买车
+		.fliter
+			.container
+				.col-xs-2
+					#brand.dropdown
+						button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							.pull-left 品 牌
+							.pull-right
+								span.caret
+						ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+							li
+								a(data-url="audi") A 奥迪
+							li
+								a(data-url="aston") A 阿斯顿 马丁
+							li
+								a(data-url="audiRS") A 奥迪RS
+							li
+								a(data-url="anke") A 安凯客车
+				.col-xs-2
+					#model.dropdown
+						button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							.pull-left 型 号
+							.pull-right
+								span.caret
+						ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+							li
+								a(data-url="audiA1") 奥迪A1
+				.col-xs-2
+					#price.dropdown
+						button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							.pull-left 价 格
+							.pull-right
+								span.caret
+						ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+							li
+								a(data-url="3w") 3万以下
+				.col-xs-2
+					#miles.dropdown
+						button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							.pull-left 公里数
+							.pull-right
+								span.caret
+						ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+							li
+								a(href="") 1万公里以下
+				.col-xs-2
+					#years.dropdown
+						button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							.pull-left 车 龄
+							.pull-right
+								span.caret
+						ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+							li
+								a(href="") 1年
+				.col-xs-2
+						a.btn.btn-success.btn-block#addition() 更多选项
+				#more-fliter.addition
+					.col-xs-2
+						#gearbox.dropdown
+							button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+								.pull-left 变速箱
+								.pull-right
+									span.caret
+							ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+								li
+									a(href="") 手动
+							
+					.col-xs-2
+						#type.dropdown
+							button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+								.pull-left 车 型
+								.pull-right
+									span.caret
+							ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+								li
+									a(href="") 轿 车
+					.col-xs-2
+						#pailiang.dropdown
+							button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+								.pull-left 排 量
+								.pull-right
+									span.caret
+							ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+								li
+									a(href="") 1L及以下
+					.col-xs-2
+						#guo.dropdown
+							button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+								.pull-left 排放标准
+								.pull-right
+									span.caret
+							ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+								li
+									a(href="") 国四
+					.col-xs-2
+						#color.dropdown
+							button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+								.pull-left 颜 色
+								.pull-right
+									span.caret
+							ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+								li
+									a(href="") 白色
+					.col-xs-2
+						#code.dropdown
+							.input-group
+								span.input-group-addon JH-
+								input.form-control(type="text",placeholder="车辆编码")
+		.content
+			.container
+				.category
+					ul
+						li 热门车系
+						li
+							a() 宝马3系
+						li
+							a() 奥迪A6L
+						li
+							a() 宝马5系
+						li
+							a() 高尔夫
+						li
+							a() 迈腾
+						li
+							a() 速腾
+						li
+							a() 马自达6
+						li
+							a() 奥迪A4L
+						li
+							a() 汉兰达
+						li
+							a() POLO
+						li
+							a() 奔驰C级
+						li
+							a() 福克斯
+						li
+							a() 大众CC
+						li
+							a() 君威
+						li
+							a() 宝来
+					ul
+						li 推荐车型
+						li
+							a() 新手代步
+						li
+							a() 经济好车
+						li
+							a() 精英之选
+						li
+							a() 高端大气
+						li
+							a() 豪华名品
+						li
+							a() 公司商用
+						li
+							a() 女士独爱
+				ul.orderby
+					li.active
+						a()默认排序
+					li
+						a()按价格
+					li
+						a()按车龄
+					li
+						a()按里程	
+				.row
+					- for(var x = 0; x < 32; x++)
+						.col-md-3.box
+							a
+								label 送2000油卡
+								.cover-img
+									img.img-responsive(src="img/placeholder.jpg")
+								p= '高尔夫-6 2012款 两箱 1.6L 自动顶配'
+								.price= '12.3'
+									span= '万'
+									span.basic 2010年01月
+										em.separator
+										= '6.70万公里'
+				nav.pagenav
+					ul.pagination
+						li.disabled
+							a(href#) &laquo;
+						li.active
+							a(href#) 1
+						li
+							a(href#) 2
+						li
+							a(href#) 3
+						li
+							a(href#) 4
+						li
+							a(href#) 5
+						li
+							a(href#) &raquo;
+
+		.footer
+			.container
+				p.pull-left copyright by 江苏太运集团
+				.pull-right
+					ul.nav.nav-pills
+						li
+							a(href="#") 关于我们
+						li
+							a(href="#") 联系我们
+						li
+							a(href="#") 加入我们

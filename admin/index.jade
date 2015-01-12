@@ -1,0 +1,305 @@
+doctype html
+html(lang="zh")
+	head
+		title 江海易车网 | 管理后台
+		meta(charset="utf-8")
+		link(rel="stylesheet" href="css/bootstrap.min.css")
+		link(rel="stylesheet" href="css/jquery.dataTables.min.css")
+		link(rel="stylesheet" href="css/dataTables.bootstrap.css")
+		link(rel="stylesheet" href="css/style.css")
+		script(src="js/jquery-2.1.3.min.js")
+		script(src="js/bootstrap.min.js")
+		script(src="js/jquery.dataTables.min.js")
+		script(src="js/dataTables.bootstrap.js")
+		script(src="js/fliter.js")
+		script(src="js/custom.js")
+
+	body
+		nav.navbar.navbar-inverse.navbar-fixed-top(role="navigation")
+			.container-fluid
+				.navbar-header
+					button.navbar-toggle.collapsed(type="button",data-toggle="collapse",data-target="#navbar",aria-controls="navbar")
+						span.sr-only Toggle Navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand(href="#") 江海易车网
+				#navbar.navbar-collapse.collapse
+					ul.nav.navbar-nav
+						li
+							a(href="#") 车辆管理
+						li
+							a(href="#") 申请管理
+					ul.nav.navbar-nav.navbar-right
+						li.dropdown
+							a.dropdown-toggle(href="#",data-toggle="dropdown") 用户名称
+							ul.dropdown-menu(role="menu")
+								li
+									a(href="#") 登出
+		.container.main
+			h1.pageheader 车辆管理
+				.pull-right
+					a.btn.btn-primary(href="#") 添加车辆
+			hr
+			#test
+			.fliter
+				.col-xs-2
+					#brand.dropdown
+						button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							.pull-left 品 牌
+							.pull-right
+								span.caret
+						ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+							li
+								a(data-url="audi") A 奥迪
+							li
+								a(data-url="aston") A 阿斯顿 马丁
+							li
+								a(data-url="audiRS") A 奥迪RS
+							li
+								a(data-url="anke") A 安凯客车
+				.col-xs-2
+					#model.dropdown
+						button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							.pull-left 型 号
+							.pull-right
+								span.caret
+						ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+							li
+								a(data-url="audiA1") 奥迪A1
+				.col-xs-2
+					#price.dropdown
+						button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							.pull-left 价 格
+							.pull-right
+								span.caret
+						ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+							li
+								a(data-url="3w") 3万以下
+				.col-xs-2
+					#miles.dropdown
+						button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							.pull-left 公里数
+							.pull-right
+								span.caret
+						ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+							li
+								a(href="") 1万公里以下
+				.col-xs-2
+					#years.dropdown
+						button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							.pull-left 车 龄
+							.pull-right
+								span.caret
+						ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+							li
+								a(href="") 1年
+				.col-xs-2
+						a.btn.btn-success.btn-block#addition() 更多选项
+				#more-fliter.addition
+					.col-xs-2
+						#gearbox.dropdown
+						button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							.pull-left 变速箱
+							.pull-right
+								span.caret
+						ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+							li
+								a(href="") 手动
+							
+					.col-xs-2
+						#type.dropdown
+						button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							.pull-left 车 型
+							.pull-right
+								span.caret
+						ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+							li
+								a(href="") 轿 车
+					.col-xs-2
+						#pailiang.dropdown
+						button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							.pull-left 排 量
+							.pull-right
+								span.caret
+						ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+							li
+								a(href="") 1L及以下
+					.col-xs-2
+						#guo.dropdown
+						button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							.pull-left 排放标准
+							.pull-right
+								span.caret
+						ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+							li
+								a(href="") 国四
+					.col-xs-2
+						#color.dropdown
+						button#dLabel.btn.btn-default.btn-block(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							.pull-left 颜 色
+							.pull-right
+								span.caret
+						ul.dropdown-menu(role="menu" aria-labelledby="dLabel")
+							li
+								a(href="") 白色
+			input(type="hidden" id="search-value" data-brand="0" data-model="0" )
+			table#carlist.table.table-striped.table-bordered()
+				thead
+					tr
+						th 名 称
+						th 排 量
+						th 车 龄
+						th 公 里
+						th 发布日期
+						th 状 态
+				tfoot
+					tr
+						th 名 称
+						th 排 量
+						th 车 龄
+						th 公 里
+						th 发布日期
+						th 状 态
+				tbody
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					

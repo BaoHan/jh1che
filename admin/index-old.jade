@@ -1,0 +1,242 @@
+doctype html
+html(lang="zh")
+	head
+		title 江海易车网 | 管理后台
+		meta(charset="utf-8")
+		link(rel="stylesheet" href="css/bootstrap.min.css")
+		link(rel="stylesheet" href="css/jquery.dataTables.min.css")
+		link(rel="stylesheet" href="css/dataTables.bootstrap.css")
+		link(rel="stylesheet" href="css/style.css")
+		script(src="js/jquery-2.1.3.min.js")
+		script(src="js/bootstrap.min.js")
+		script(src="js/jquery.dataTables.min.js")
+		script(src="js/dataTables.bootstrap.js")
+		script(src="js/fliter.js")
+		script(src="js/custom.js")
+
+	body
+		nav.navbar.navbar-inverse.navbar-fixed-top(role="navigation")
+			.container-fluid
+				.navbar-header
+					button.navbar-toggle.collapsed(type="button",data-toggle="collapse",data-target="#navbar",aria-controls="navbar")
+						span.sr-only Toggle Navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand(href="#") 江海易车网
+				#navbar.navbar-collapse.collapse
+					ul.nav.navbar-nav
+						li
+							a(href="#") 车辆管理
+						li
+							a(href="#") 申请管理
+					ul.nav.navbar-nav.navbar-right
+						li.dropdown
+							a.dropdown-toggle(href="#",data-toggle="dropdown") 用户名称
+							ul.dropdown-menu(role="menu")
+								li
+									a(href="#") 登出
+		.container.main
+			h1.pageheader 车辆管理
+				.pull-right
+					a.btn.btn-primary(href="#") 添加车辆
+			hr
+			.fliter
+				#aul
+				.col-xs-2
+					select.form-control
+						option 品牌
+				.col-xs-2
+					select.form-control
+						option 型号
+				.col-xs-2
+					select.form-control
+						option 价格
+				.col-xs-2
+					select.form-control
+						option 公里数
+				.col-xs-2
+					.form-control#chelin
+						a.bbb 车龄
+						a.bbb 3年
+						a.bbb 4年
+				.col-xs-2
+					.col-xs-9
+						a.btn.btn-success.btn-block(href="#") 搜索车辆
+					.col-xs-3
+						button#addition.btn.btn-block +
+				#more-fliter.addition
+					.col-xs-2
+						select.form-control
+							option 变速箱
+					.col-xs-2
+						select.form-control
+							option 车型
+					.col-xs-2
+						select.form-control
+							option 排量
+					.col-xs-2
+						select.form-control
+							option 排放标准
+					.col-xs-2
+						select.form-control
+							option 颜色
+			table#carlist.table.table-striped.table-bordered()
+				thead
+					tr
+						th 名 称
+						th 排 量
+						th 车 龄
+						th 公 里
+						th 发布日期
+						th 状 态
+				tfoot
+					tr
+						th 名 称
+						th 排 量
+						th 车 龄
+						th 公 里
+						th 发布日期
+						th 状 态
+				tbody
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					tr
+						td 奥迪A6L
+						td 30L
+						td 3
+						td 10
+						td 20140103
+						td 发布中
+					
